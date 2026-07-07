@@ -1,0 +1,8 @@
+horizonte,fecha_pronosticada,prediccion,modelo_utilizado
+1,2026-07-01,37.8662,xgboost_regression_h1
+2,2026-07-02,38.844,xgboost_regression_h2
+3,2026-07-03,34.2611,xgboost_regression_h3
+4,2026-07-04,31.1455,xgboost_regression_h4
+5,2026-07-05,32.5792,xgboost_regression_h5
+6,2026-07-06,32.8472,xgboost_regression_h6
+7,2026-07-07,33.829,xgboost_regression_h7

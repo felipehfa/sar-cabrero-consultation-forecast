@@ -1,0 +1,213 @@
+2026-07-05 18:23:34 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 18:23:34 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-05 18:23:34 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 18:23:34 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-05 18:23:35 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-05 18:23:38 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-05 18:23:49 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 18:23:49 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-05 18:23:49 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 18:23:49 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-05 18:23:50 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-05 18:23:52 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-05 21:25:50 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 21:25:50 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-05 21:25:50 | INFO     | forecast_pipeline | ======================================================================
+2026-07-05 21:25:50 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-05 21:25:50 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-05 21:25:51 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-06 15:53:35 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 15:53:35 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-06 15:53:35 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 15:53:35 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-06 15:53:35 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-06 15:53:36 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-06 16:02:31 | INFO     | forecast_pipeline | [h=1] Entrenamiento del modelo...
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-06 16:43:15 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-06 16:52:20 | INFO     | forecast_pipeline | [h=1] Entrenamiento del modelo...
+2026-07-06 16:54:26 | INFO     | forecast_pipeline | [h=2] Selección de variables...
+2026-07-06 17:02:27 | INFO     | forecast_pipeline | [h=2] Entrenamiento del modelo...
+2026-07-06 17:03:55 | INFO     | forecast_pipeline | [h=3] Selección de variables...
+2026-07-06 17:27:32 | INFO     | forecast_pipeline | [h=3] Entrenamiento del modelo...
+2026-07-06 17:29:02 | INFO     | forecast_pipeline | [h=4] Selección de variables...
+2026-07-06 17:34:36 | INFO     | forecast_pipeline | [h=4] Entrenamiento del modelo...
+2026-07-06 17:36:06 | INFO     | forecast_pipeline | [h=5] Selección de variables...
+2026-07-06 17:42:19 | INFO     | forecast_pipeline | [h=5] Entrenamiento del modelo...
+2026-07-06 17:44:12 | INFO     | forecast_pipeline | [h=6] Selección de variables...
+2026-07-06 17:50:41 | INFO     | forecast_pipeline | [h=6] Entrenamiento del modelo...
+2026-07-06 17:52:09 | INFO     | forecast_pipeline | [h=7] Selección de variables...
+2026-07-06 17:57:53 | INFO     | forecast_pipeline | [h=7] Entrenamiento del modelo...
+2026-07-06 17:58:59 | INFO     | forecast_pipeline | Entrenamiento completado: los 7 modelos quedaron guardados en disco.
+2026-07-06 17:58:59 | INFO     | forecast_pipeline | Etapa 2/8 — Carga de modelos
+2026-07-06 17:58:59 | INFO     | forecast_pipeline | Modelo h=1 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=2 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=3 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=4 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=5 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=6 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Modelo h=7 cargado (5 miembros del ensamble).
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Los 7 modelos se cargaron correctamente.
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Etapa 3/8 — Predicción futura (forecast T+1..T+7)
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Generando forecast a partir de la última fecha disponible: 2026-06-29
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=1: forecast para 2026-07-01 = 37.87
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=2: forecast para 2026-07-02 = 38.84
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=3: forecast para 2026-07-03 = 34.26
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=4: forecast para 2026-07-04 = 31.15
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=5: forecast para 2026-07-05 = 32.58
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=6: forecast para 2026-07-06 = 32.85
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=7: forecast para 2026-07-07 = 33.83
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Forecast guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\forecast.csv (7 filas)
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | Etapa 4/8 — Evaluación del modelo + comparación con Naive
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=1: evaluación OK (n=358) MAE_ml=7.4107
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=2: evaluación OK (n=357) MAE_ml=7.6406
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=3: evaluación OK (n=356) MAE_ml=7.3867
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=4: evaluación OK (n=355) MAE_ml=7.2793
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=5: evaluación OK (n=354) MAE_ml=7.1673
+2026-07-06 17:59:00 | INFO     | forecast_pipeline | h=6: evaluación OK (n=353) MAE_ml=7.5564
+2026-07-06 17:59:01 | INFO     | forecast_pipeline | h=7: evaluación OK (n=352) MAE_ml=7.7366
+2026-07-06 17:59:01 | INFO     | forecast_pipeline | Métricas de evaluación guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\metrics.csv (7 filas)
+2026-07-06 17:59:01 | INFO     | forecast_pipeline | Tabla comparativa vs Naive guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\comparison.csv (42 filas)
+2026-07-06 17:59:01 | INFO     | forecast_pipeline | Etapa 5/8 — Backtesting operacional (simulación semanal)
+2026-07-06 17:59:01 | INFO     | forecast_pipeline | Backtesting: 52 domingos a simular entre 2025-07-06 y 2026-06-28.
+2026-07-06 17:59:01 | WARNING  | forecast_pipeline | Backtesting 2025-08-10 h=7: sin valor real disponible en 2025-08-18, se omite.
+2026-07-06 17:59:04 | WARNING  | forecast_pipeline | Backtesting 2026-05-10 h=7: sin valor real disponible en 2026-05-18, se omite.
+2026-07-06 17:59:04 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=2: sin valor real disponible en 2026-06-24, se omite.
+2026-07-06 17:59:04 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=3: sin valor real disponible en 2026-06-25, se omite.
+2026-07-06 17:59:04 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=4: sin valor real disponible en 2026-06-26, se omite.
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Backtesting completado: 352 predicciones generadas (7 horizontes, 51 fechas de ejecución).
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Predicciones de backtesting guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\backtesting_predictions.csv (352 filas)
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Métricas de backtesting guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\backtesting_metrics.csv (21 filas)
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Etapa 6/8 — Generación de gráficos
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\serie_real_vs_prediccion.png
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\scatter.png
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\error_histogram.png
+2026-07-06 17:59:05 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\serie_real_vs_prediccion.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\scatter.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\error_histogram.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\serie_real_vs_prediccion.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\scatter.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\error_histogram.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\serie_real_vs_prediccion.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\scatter.png
+2026-07-06 17:59:06 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\error_histogram.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\serie_real_vs_prediccion.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\scatter.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\error_histogram.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\serie_real_vs_prediccion.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\scatter.png
+2026-07-06 17:59:07 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\error_histogram.png
+2026-07-06 17:59:08 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\serie_real_vs_prediccion.png
+2026-07-06 17:59:08 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\scatter.png
+2026-07-06 17:59:08 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\error_histogram.png
+2026-07-06 19:40:00 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 19:40:00 | INFO     | forecast_pipeline | INICIO DEL PIPELINE DE INFERENCIA, EVALUACIÓN Y REPORTE
+2026-07-06 19:40:00 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 19:40:00 | INFO     | forecast_pipeline | Etapa 1/8 — Entrenamiento
+2026-07-06 19:40:00 | INFO     | forecast_pipeline | Ejecutando feature engineering...
+2026-07-06 19:40:04 | INFO     | forecast_pipeline | [h=1] Selección de variables...
+2026-07-06 19:44:36 | INFO     | forecast_pipeline | [h=1] Entrenamiento del modelo...
+2026-07-06 19:45:48 | INFO     | forecast_pipeline | [h=2] Selección de variables...
+2026-07-06 19:50:29 | INFO     | forecast_pipeline | [h=2] Entrenamiento del modelo...
+2026-07-06 19:51:26 | INFO     | forecast_pipeline | [h=3] Selección de variables...
+2026-07-06 19:56:00 | INFO     | forecast_pipeline | [h=3] Entrenamiento del modelo...
+2026-07-06 19:57:19 | INFO     | forecast_pipeline | [h=4] Selección de variables...
+2026-07-06 20:01:53 | INFO     | forecast_pipeline | [h=4] Entrenamiento del modelo...
+2026-07-06 20:03:06 | INFO     | forecast_pipeline | [h=5] Selección de variables...
+2026-07-06 20:07:43 | INFO     | forecast_pipeline | [h=5] Entrenamiento del modelo...
+2026-07-06 20:08:58 | INFO     | forecast_pipeline | [h=6] Selección de variables...
+2026-07-06 20:13:34 | INFO     | forecast_pipeline | [h=6] Entrenamiento del modelo...
+2026-07-06 20:14:39 | INFO     | forecast_pipeline | [h=7] Selección de variables...
+2026-07-06 20:19:15 | INFO     | forecast_pipeline | [h=7] Entrenamiento del modelo...
+2026-07-06 20:20:15 | INFO     | forecast_pipeline | Entrenamiento completado: los 7 modelos quedaron guardados en disco.
+2026-07-06 20:20:15 | INFO     | forecast_pipeline | Etapa 2/8 — Carga de modelos
+2026-07-06 20:20:15 | INFO     | forecast_pipeline | Modelo h=1 cargado (5 miembros del ensamble).
+2026-07-06 20:20:15 | INFO     | forecast_pipeline | Modelo h=2 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Modelo h=3 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Modelo h=4 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Modelo h=5 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Modelo h=6 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Modelo h=7 cargado (5 miembros del ensamble).
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Los 7 modelos se cargaron correctamente.
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Etapa 3/8 — Predicción futura (forecast T+1..T+7)
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Generando forecast a partir de la última fecha disponible: 2026-06-29
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=1: forecast para 2026-07-01 = 37.87
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=2: forecast para 2026-07-02 = 38.84
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=3: forecast para 2026-07-03 = 34.26
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=4: forecast para 2026-07-04 = 31.15
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=5: forecast para 2026-07-05 = 32.58
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=6: forecast para 2026-07-06 = 32.85
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=7: forecast para 2026-07-07 = 33.83
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Forecast guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\forecast.csv (7 filas)
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Etapa 4/8 — Evaluación del modelo + comparación con Naive
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=1: evaluación OK (n=358) MAE_ml=7.4107
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=2: evaluación OK (n=357) MAE_ml=7.6406
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=3: evaluación OK (n=356) MAE_ml=7.3867
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=4: evaluación OK (n=355) MAE_ml=7.2793
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=5: evaluación OK (n=354) MAE_ml=7.1673
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=6: evaluación OK (n=353) MAE_ml=7.5564
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | h=7: evaluación OK (n=352) MAE_ml=7.7366
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Métricas de evaluación guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\metrics.csv (7 filas)
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Tabla comparativa vs Naive guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\comparison.csv (42 filas)
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Etapa 5/8 — Backtesting operacional (simulación semanal)
+2026-07-06 20:20:16 | INFO     | forecast_pipeline | Backtesting: 52 domingos a simular entre 2025-07-06 y 2026-06-28.
+2026-07-06 20:20:17 | WARNING  | forecast_pipeline | Backtesting 2025-08-10 h=7: sin valor real disponible en 2025-08-18, se omite.
+2026-07-06 20:20:19 | WARNING  | forecast_pipeline | Backtesting 2026-05-10 h=7: sin valor real disponible en 2026-05-18, se omite.
+2026-07-06 20:20:20 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=2: sin valor real disponible en 2026-06-24, se omite.
+2026-07-06 20:20:20 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=3: sin valor real disponible en 2026-06-25, se omite.
+2026-07-06 20:20:20 | WARNING  | forecast_pipeline | Backtesting 2026-06-21 h=4: sin valor real disponible en 2026-06-26, se omite.
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Backtesting completado: 352 predicciones generadas (7 horizontes, 51 fechas de ejecución).
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Predicciones de backtesting guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\backtesting_predictions.csv (352 filas)
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Métricas de backtesting guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\backtesting_metrics.csv (21 filas)
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Etapa 6/8 — Generación de gráficos
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\serie_real_vs_prediccion.png
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\scatter.png
+2026-07-06 20:20:20 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_1\error_histogram.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\serie_real_vs_prediccion.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\scatter.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_2\error_histogram.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\serie_real_vs_prediccion.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\scatter.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_3\error_histogram.png
+2026-07-06 20:20:21 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\serie_real_vs_prediccion.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\scatter.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_4\error_histogram.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\serie_real_vs_prediccion.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\scatter.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_5\error_histogram.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\serie_real_vs_prediccion.png
+2026-07-06 20:20:22 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\scatter.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_6\error_histogram.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\serie_real_vs_prediccion.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\scatter.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\horizon_7\error_histogram.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\boxplot_error_por_horizonte.png
+2026-07-06 20:20:23 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\heatmap.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\operational_forecast.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\naive_comparison_mae.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Etapa 7/8 — Importancia de variables
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Importancia de variables h=1 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h1.csv (81 filas)
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h1.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Importancia de variables h=2 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h2.csv (69 filas)
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h2.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Importancia de variables h=3 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h3.csv (95 filas)
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h3.png
+2026-07-06 20:20:24 | INFO     | forecast_pipeline | Importancia de variables h=4 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h4.csv (81 filas)
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h4.png
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Importancia de variables h=5 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h5.csv (91 filas)
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h5.png
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Importancia de variables h=6 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h6.csv (71 filas)
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h6.png
+2026-07-06 20:20:25 | INFO     | forecast_pipeline | Importancia de variables h=7 guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h7.csv (79 filas)
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | Gráfico guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\plots\feature_importance\feature_importance_h7.png
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | Etapa 8/8 — Resumen automático
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | Resumen JSON guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\summary.json
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | Resumen CSV guardado: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results\summary.csv
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | ======================================================================
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | PIPELINE FINALIZADO — tiempo total: 2425.1s
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | Resultados en: G:\Mi unidad\Proyectos personales\000 respiratorios\consultas-predict-cabrero\ml\production\results
+2026-07-06 20:20:26 | INFO     | forecast_pipeline | ======================================================================

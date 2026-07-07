@@ -1,0 +1,31 @@
+{
+    "mejor_horizonte_mae": 5,
+    "peor_horizonte_mae": 7,
+    "mejor_mae": 7.1673,
+    "mejor_rmse": 9.2044,
+    "horizonte_mejor_rmse": 5,
+    "mejora_promedio_pct_vs_naive_semanal": 16.72,
+    "mejora_promedio_pct_vs_naive_anual": 29.9,
+    "backtesting_mae_promedio": 7.1021,
+    "backtesting_mejor_horizonte_mae": 5,
+    "variable_mas_importante_por_horizonte": {
+        "1": "atenciones_ma3",
+        "2": "total_atenciones",
+        "3": "atenciones_lag1",
+        "4": "total_atenciones",
+        "5": "total_atenciones",
+        "6": "atenciones_ma3",
+        "7": "atenciones_ma3"
+    },
+    "tiempos_segundos": {
+        "1_entrenamiento": 2414.839,
+        "2_carga_modelos": 0.558,
+        "3_forecast": 0.114,
+        "tiempo_promedio_por_prediccion": 0.016,
+        "4_evaluacion": 0.29,
+        "5_backtesting": 3.661,
+        "6_graficos": 3.888,
+        "7_importancia_variables": 1.735,
+        "total": 2425.087
+    }
+}
