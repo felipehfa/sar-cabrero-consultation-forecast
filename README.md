@@ -109,8 +109,11 @@ consistente a ambos baselines *naive* en los 7 horizontes de pronóstico:
 | Horizonte | MAE modelo | MAE naive semanal | MAE naive anual | Mejora vs. semanal | Mejora vs. anual |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 día | 7.41 | 8.94 | 10.60 | 17.1% | 30.1% |
+| 2 días | 7.64 | 8.91 | 10.58 | 14.3% | 27.8% |
 | 3 días | 7.39 | 8.92 | 10.62 | 17.2% | 30.5% |
+| 4 días | 7.28 | 8.90 | 10.65 | 18.3% | 31.6% |
 | 5 días | 7.17 | 9.02 | 10.69 | 20.6% | 33.0% |
+| 6 días | 7.56 | 8.99 | 10.65 | 16.0% | 29.1% |
 | 7 días | 7.74 | 8.97 | 10.65 | 13.7% | 27.3% |
 
 En promedio sobre todos los horizontes, el modelo reduce el error (MAE) en
