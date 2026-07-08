@@ -142,8 +142,6 @@ Una vez descargados los archivos, estos deben ubicarse en la siguiente carpeta d
 ```text
 data/raw/datos_deis/
 
----
-
 ## Tecnologías
 
 - **Python** — lenguaje principal del proyecto
