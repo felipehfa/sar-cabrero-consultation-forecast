@@ -6,11 +6,7 @@ consultas diarias a horizontes de **1 a 7 días**, combinando variables
 climáticas (temperatura, humedad, precipitación, PM2.5, PM10, NO2, ozono),
 calendario/feriados y el historial propio de consultas.
 
-El objetivo es apoyar la planificación de personal y recursos del centro de
-salud, anticipando alzas de demanda asociadas a condiciones ambientales y
-estacionales.
-
-**[Ver dashboard en vivo](TU_LINK_AQUI)** ← *placeholder, se actualizará cuando el dashboard esté desplegado*
+**[Ver dashboard](https://sar-cabrero-consultation-forecast.streamlit.app/)**
 
 ---
 
@@ -105,11 +101,6 @@ python ml/production/run_pipeline.py --skip-training
 streamlit run visulization-streamlit/app.py
 ```
 
-> **Nota**: el dashboard está temporalmente desconectado de las salidas
-> actuales del pipeline y está en proceso de actualización.
-
----
-
 ## Resultados destacados
 
 En evaluación sobre el conjunto de test, el modelo XGBoost supera de forma
@@ -131,6 +122,25 @@ consistente con la evaluación en test.
 
 *(Cifras extraídas de `ml/production/results/comparison.csv`,
 `backtesting_metrics.csv` y `summary.json`.)*
+
+---
+
+## Datos de consultas médicas
+
+Los datos utilizados en este proyecto fueron obtenidos desde el portal de **Datos Abiertos del Departamento de Estadísticas e Información de Salud (DEIS)** del Ministerio de Salud de Chile.
+
+Con el objetivo de mantener un repositorio liviano, **las bases de datos originales no se incluyen en este repositorio**, debido a su tamaño.
+
+Los archivos pueden descargarse desde el siguiente enlace:
+
+**https://deis.minsal.cl/#datosabiertos**
+
+Dentro del portal, seleccione la opción **"Atenciones de Urgencia"**, donde encontrará las bases de datos correspondientes a cada año. La base de datos del año en curso es actualizada diariamente por el DEIS.
+
+Una vez descargados los archivos, estos deben ubicarse en la siguiente carpeta del proyecto:
+
+```text
+data/raw/datos_deis/
 
 ---
 
