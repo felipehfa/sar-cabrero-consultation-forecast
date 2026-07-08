@@ -1,0 +1,13 @@
+streamlit
+pandas
+plotly
+matplotlib
+numpy
+optuna
+holidays
+requests
+scikit-learn
+scipy
+shap
+xgboost
+openpyxl
