@@ -172,30 +172,23 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
     # bajo un mismo encabezado (confirmado: eso NO se arregla cambiando el
     # tipo de eje, el buscador de píxel más cercano es independiente del
     # tipo de eje). La solución real es separar estilo de hover:
-    #   - Los ~50 trazos del abanico quedan solo VISUALES: hoverinfo="skip"
-    #     los excluye por completo del sistema de hover (no compiten por el
-    #     tooltip).
+    #   - Los ~50 trazos del abanico de ERROR (fila 2) quedan solo VISUALES:
+    #     hoverinfo="skip" los excluye por completo del sistema de hover (no
+    #     compiten por el tooltip).
     #   - Un único trace adicional, invisible (opacity 0), con EXACTAMENTE
     #     un punto por fecha de la ventana completa (no hay fechas donde dos
     #     horizontes/semanas se superpongan en los datos), concentra todo el
-    #     hover — sin ambigüedad posible entre trazos.
+    #     hover del error — sin ambigüedad posible entre trazos.
+    # La PREDICCIÓN (fila 1), en cambio, va en un solo trace continuo (no hay
+    # overlap de fechas entre semanas consecutivas de ejecución), así que no
+    # necesita este truco: ella misma es su propio trace de hover.
+    # Índices de trazos que controlan los botones de mostrar/ocultar
+    # "Valor real" y "Predicción" (ver updatemenus más abajo).
+    pred_trace_indices = []
+
     primer_abanico = True
     for exec_date, group in df_window.groupby("fecha_ejecucion"):
         group = group.sort_values("horizonte")
-        fig.add_trace(
-            go.Scatter(
-                x=group["fecha_pronosticada"], y=group["prediccion"],
-                mode="lines+markers",
-                line=dict(color="rgba(31,119,180,0.35)", width=1),
-                marker=dict(size=4, color="rgba(31,119,180,0.5)"),
-                name="Pronóstico semanal (t+1..t+7)",
-                legendgroup="fan_pred",
-                showlegend=primer_abanico,
-                hoverinfo="skip",
-            ),
-            row=1, col=1,
-        )
-
         fig.add_trace(
             go.Scatter(
                 x=group["fecha_pronosticada"], y=group["error"],
@@ -211,23 +204,19 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
         )
         primer_abanico = False
 
-    # ── Trace único de hover para las predicciones (fila 1) e igual para
-    # el error (fila 2) — invisible, un solo punto por fecha, sin ambigüedad.
+    # ── Predicción (fila 1): un solo trace continuo, ordenado por fecha,
+    # uniendo todos los puntos sin importar de qué domingo de ejecución
+    # salió cada uno.
     df_hover = df_window.sort_values("fecha_pronosticada")
     fig.add_trace(
         go.Scatter(
             x=df_hover["fecha_pronosticada"], y=df_hover["prediccion"],
-            mode="markers",
-            marker=dict(size=6, opacity=0),
-            name="Pronóstico semanal (t+1..t+7)",
-            legendgroup="fan_pred",
-            showlegend=False,
+            mode="lines+markers",
+            line=dict(color="#1f77b4", width=2),
+            marker=dict(size=4, color="#1f77b4"),
+            name="Predicción",
             customdata=df_hover[["horizonte"]].to_numpy(),
             hovertemplate=(
-                # Sin "Fecha:" (ya es el encabezado del cuadro unificado) ni
-                # "Valor real:" (ya lo muestra, con su propio color, el trace
-                # "Valor real" — repetirlo aquí duplicaba la línea en el
-                # cuadro consolidado).
                 "<b>Predicción:</b> %{y:.2f}<br>"
                 "<b>Horizonte:</b> t+%{customdata[0]:.0f}"
                 "<extra></extra>"
@@ -235,6 +224,10 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
         ),
         row=1, col=1,
     )
+    pred_trace_indices.append(len(fig.data) - 1)
+
+    # ── Trace único de hover para el error (fila 2) — invisible, un solo
+    # punto por fecha, sin ambigüedad entre semanas.
     fig.add_trace(
         go.Scatter(
             x=df_hover["fecha_pronosticada"], y=df_hover["error"],
@@ -281,6 +274,7 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
         ),
         row=1, col=1,
     )
+    real_trace_index = len(fig.data) - 1
 
     # ── Línea de referencia error=0 (fila 2) ──
     fig.add_hline(y=0, line_dash="dot", line_color="gray", row=2, col=1)
@@ -295,6 +289,10 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
     # para ese fondo. plot/paper_bgcolor quedan transparentes para que se
     # vea el fondo real de la app (que ya cambia con el tema) detrás del
     # gráfico, en vez de un color de fondo propio de la plantilla.
+    # ── Botones "Valor real" / "Predicción" (esquina superior izquierda,
+    # uno sobre el otro) ── Toggles nativos de Plotly: cada botón alterna,
+    # con cada click, entre `args` (oculta) y `args2` (muestra) para sus
+    # trazos asociados — sin necesidad de rerun de Streamlit.
     fig.update_layout(
         template=template,
         hovermode="x unified",
@@ -303,6 +301,32 @@ def build_operational_figure(df_window: pd.DataFrame, df_real: pd.DataFrame,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
         height=700,
+        updatemenus=[
+            dict(
+                type="buttons",
+                direction="down",
+                x=0.0, xanchor="left",
+                y=1.15, yanchor="top",
+                pad=dict(t=0, r=0, b=0, l=0),
+                showactive=False,
+                bgcolor="rgba(120,120,120,0.25)",
+                bordercolor="rgba(120,120,120,0.5)",
+                buttons=[
+                    dict(
+                        label="Valor real",
+                        method="restyle",
+                        args=["visible", False, [real_trace_index]],
+                        args2=["visible", True, [real_trace_index]],
+                    ),
+                    dict(
+                        label="Predicción",
+                        method="restyle",
+                        args=["visible", False, pred_trace_indices],
+                        args2=["visible", True, pred_trace_indices],
+                    ),
+                ],
+            ),
+        ],
     )
     fig.update_xaxes(showgrid=True, title_text="Fecha", row=2, col=1)
     fig.update_yaxes(showgrid=True, title_text="Consultas respiratorias", row=1, col=1)
@@ -410,10 +434,11 @@ métodos de referencia simples (naive).
     else:
         st.info(
             "**Cómo leer este gráfico:** la línea naranja (arriba) muestra las "
-            "consultas reales día a día. Cada trazo azul representa las 7 "
-            "predicciones que el modelo hizo un domingo específico para la semana "
-            "siguiente (t+1 a t+7) — mientras más cerca esté un trazo azul de la "
-            "línea naranja, mejor fue esa predicción. Abajo, cada trazo rojo muestra "
+            "consultas reales día a día, y la línea azul la predicción del modelo "
+            "para esa misma fecha (cada domingo se recalcula para los 7 días "
+            "siguientes, t+1 a t+7) — mientras más cerca estén ambas líneas, mejor "
+            "fue la predicción. Los botones sobre el gráfico permiten mostrar u "
+            "ocultar cada línea por separado. Abajo, cada trazo rojo muestra "
             "el error de esas mismas predicciones (valor real menos predicción): "
             "cerca de cero es acierto, positivo significa que el modelo subestimó la "
             "demanda real, y negativo que la sobreestimó."
